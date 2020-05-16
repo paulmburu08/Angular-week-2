@@ -1,4 +1,4 @@
 export class RepoSearch {
-    repo
+    repoSearch: [];
 }
 

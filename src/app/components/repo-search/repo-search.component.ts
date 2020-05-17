@@ -20,7 +20,7 @@ export class RepoSearchComponent implements OnInit {
   onSubmit(){
     this.repoSearchInput = this.repo_Search.userInput 
     this.repo_Search.dataRequest()
-    this.repoSearchs = this.repo_Search.repoSearch
+    this.repoSearchs = this.repo_Search.repoSearch;
   }
 
 }

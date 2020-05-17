@@ -2,6 +2,8 @@ import { Injectable } from '@angular/core';
 import { environment } from 'src/environments/environment';
 import { RepoSearch } from '../modules/repo-search';
 import { HttpClient } from '@angular/common/http';
+import { resolve } from 'dns';
+import { rejects } from 'assert';
 
 
 @Injectable({
@@ -13,6 +15,21 @@ export class RepoSearchService {
   userSearchUrl = `${environment.userUrl}`;
   API_KEY = `${environment.apiKey}`;
   repoSearch : RepoSearch;
+  userInput : string;
 
-  constructor(http: HttpClient) { }
+  constructor(private http: HttpClient) {
+    this.repoSearch = new RepoSearch();
+   }
+
+   dataRequest(){
+    interface ApiReponse{
+      data: any[];
+    }
+
+    let promise = new Promise((resolve,reject)=>{
+      this.http.get<ApiReponse>()
+    });
+
+   }
+
 }

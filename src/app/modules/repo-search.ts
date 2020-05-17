@@ -1,4 +1,4 @@
 export class RepoSearch {
-    repoSearch: any[];
+    repoSearch: string[];
 }
 

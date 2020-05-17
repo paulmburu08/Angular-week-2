@@ -9,18 +9,18 @@ import { RepoSearch } from 'src/app/modules/repo-search';
 })
 export class RepoSearchComponent implements OnInit {
 
-  public repoSearchs : RepoSearchService;
+  repoSearchs : RepoSearch;
   repoSearchInput : string;
   constructor(private repo_Search:RepoSearchService) { 
   }
 
   ngOnInit(): void {
-    this.repo_Search.dataRequest();
-    this.repoSearchs = this.repo_Search 
   }
 
   onSubmit(){
-    this.repoSearchInput = this.repo_Search.userInput   
+    this.repoSearchInput = this.repo_Search.userInput 
+    this.repo_Search.dataRequest()
+    this.repoSearchs = this.repo_Search.repoSearch
   }
 
 }

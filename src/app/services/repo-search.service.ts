@@ -21,19 +21,18 @@ export class RepoSearchService {
 
    dataRequest(){
     interface ApiReponse{
-      data: any[];
+      data: string[];
     }
 
     let promise = new Promise((resolve,reject)=>{
-      this.http.get<ApiReponse>(`${this.repoSearchUrl}${this.userInput}`).toPromise().then(response=>{
-        for (let item of response.data){
-          this.repoSearch.repoSearch.push();
-        }
-
+      this.http.get<ApiReponse>(`${this.repoSearchUrl}+${this.userInput}`).toPromise().then(response=>{
+        this.repoSearch.repoSearch = response.data
+        
         resolve()
       },
+      
       error=>{
-        this.repoSearch.repoSearch.push('error');
+        this.repoSearch.repoSearch = ["yes"]
 
         reject(error);
 

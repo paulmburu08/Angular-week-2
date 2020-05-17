@@ -27,9 +27,27 @@ export class RepoSearchService {
     }
 
     let promise = new Promise((resolve,reject)=>{
-      this.http.get<ApiReponse>(`${}`)
-    });
+      this.http.get<ApiReponse>(`${this.repoSearchUrl}${this.userInput}`).toPromise().then(response=>{
+        let length = this.repoSearch.repoSearch.length;
+         
+        for (let index=0; index<length; length++){
+          this.repoSearch.repoSearch.pop();
+        }
 
+        for (let item of response.data){
+          this.repoSearch.repoSearch.push();
+        }
+
+        resolve()
+      },
+      error=>{
+        this.repoSearch.repoSearch.push('error');
+
+        reject(error);
+
+      });
+    });
+    return promise;
    }
 
 }

@@ -1,0 +1,16 @@
+<div class="container-fluid">
+  <div>
+		<form #userForm="ngForm" (ngSubmit)="onSubmit()" >
+
+			<div class="form-group">
+				<input type="text" name="repo" id="repo" required #name='ngModel' [(ngModel)]="repoSearchInput" >
+			</div>
+
+			<div class="form-group">
+				<button type="submit">Submit</button>
+			</div>
+
+		</form>
+
+	</div>
+</div>

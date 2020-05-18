@@ -9,18 +9,24 @@ import { UserSearch } from 'src/app/modules/user-search';
 })
 export class UserSearchComponent implements OnInit {
 
-  searchInput : string
-  searchResult : UserSearch
+  user : UserSearch
   
   constructor(private user_service : UserSearchService) { }
 
- onSubmit(){
-  this.user_service.getUser(this.searchInput)
-  this.searchResult = this.user_service.userSearch;
+ onSubmit(search):any{
+  this.user_service.getUser(search).then(
+    (success)=>{
+      this.user = this.user_service.userSearch
+    },
+    (error)=>{
+      console.log(error)
+    }
+    )
+     
 }
 
-  ngOnInit(): void {
-  
+  ngOnInit(){
+    
   }
 
 

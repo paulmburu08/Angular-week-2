@@ -1,9 +1,9 @@
 <div class="container-fluid">
     <div>
-          <form #userForm="ngForm" (ngSubmit)="onSubmit()" >
+          <form #userForm="ngForm" (ngSubmit)="onSubmit(user)" >
   
               <div class="form-group">
-                  <input type="text" name="user" id="user" required #name='ngModel' [(ngModel)]="searchInput" >
+                  <input type="text" name="user" id="user" required #name='ngModel' [(ngModel)]="user" >
               </div>
   
               <div class="form-group">
@@ -14,6 +14,6 @@
   
       </div>
       <div>
-          {{searchResult}}
+        <h4>{{user?.repos_url}}</h4> 
       </div>
   </div>

@@ -31,9 +31,9 @@ export class UserSearchService {
           reject();
         }
       )
-
-
     })
+
+    return promise
   };
 
 

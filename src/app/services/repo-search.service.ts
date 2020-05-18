@@ -24,22 +24,6 @@ export class RepoSearchService {
       data: any[];
     }
 
-    let promise = new Promise((resolve,reject)=>{
-      this.http.get<ApiReponse>(`${this.repoSearchUrl}${this.userInput}`).toPromise().then(response=>{
-        this.repoSearch.repoSearch = response.data
-        
-        resolve()
-
-      },
-      
-      error=>{
-        this.repoSearch.repoSearch = ["Alert"]
-
-        reject(error);
-
-      });
-    });
-    return promise;
    }
 
 }

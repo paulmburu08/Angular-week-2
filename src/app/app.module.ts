@@ -7,12 +7,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { GithubSearchComponent } from './components/github-search/github-search.component';
 import { RepoSearchComponent } from './components/repo-search/repo-search.component';
+import { UserSearchComponent } from './components/user-search/user-search.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     GithubSearchComponent,
-    RepoSearchComponent
+    RepoSearchComponent,
+    UserSearchComponent
   ],
   imports: [
     BrowserModule,

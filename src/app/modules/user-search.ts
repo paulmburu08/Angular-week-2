@@ -3,5 +3,5 @@ export class UserSearch {
     avatar_url : any;
     followers : any;
     following : any;
-    repos_url : any;
+    public_repos : any;
 }

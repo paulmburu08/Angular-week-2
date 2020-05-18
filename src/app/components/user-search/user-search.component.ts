@@ -10,6 +10,7 @@ import { UserSearch } from 'src/app/modules/user-search';
 export class UserSearchComponent implements OnInit {
 
   user : UserSearch
+  inputUser : string
   
   constructor(private user_service : UserSearchService) { }
 
@@ -25,7 +26,7 @@ export class UserSearchComponent implements OnInit {
      
 }
 
-  ngOnInit(){
+  ngOnInit(): void{
     
   }
 

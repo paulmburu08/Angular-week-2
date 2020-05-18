@@ -14,7 +14,7 @@ export class UserSearchComponent implements OnInit {
   
   constructor(private user_service : UserSearchService) { }
 
- onSubmit(search):any{
+ onSubmit(search){
   this.user_service.getUser(search).then(
     (success)=>{
       this.user = this.user_service.userSearch

@@ -22,7 +22,6 @@ export class UserSearchService {
           console.log(success);
 
             resolve();
-
         },
 
         (error) => {

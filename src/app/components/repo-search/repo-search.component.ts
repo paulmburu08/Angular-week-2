@@ -8,19 +8,30 @@ import { RepoSearch } from 'src/app/modules/repo-search';
   styleUrls: ['./repo-search.component.css']
 })
 export class RepoSearchComponent implements OnInit {
+  
+  users : RepoSearch;
+  inputRepo : string;
 
-  repoSearchs : RepoSearch;
-  repoSearchInput : string;
-  constructor(private repo_Search:RepoSearchService) { 
+  constructor(private repo_service : RepoSearchService) { }
+
+  onSubmit(search){
+    this.repo_service.getUser(search).then(
+      (success)=>{
+        this.users = this.repo_service.repoSearch
+      },
+      (error)=>{
+        console.log(error)
+      }
+      )
   }
 
+  repoName : string;
   ngOnInit(): void {
-  }
 
-  onSubmit(){
-    this.repoSearchInput = this.repo_Search.userInput 
-    this.repo_Search.dataRequest()
-    this.repoSearchs = this.repo_Search.repoSearch;
+  for (let i = 0; i < this.users?.items.length ; i++) {
+    this.repoName = this.users?.items[i].full_name;
+  
+  }
   }
 
 }

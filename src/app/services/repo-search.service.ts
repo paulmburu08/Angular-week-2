@@ -13,17 +13,29 @@ export class RepoSearchService {
   userSearchUrl = `${environment.userUrl}`;
   API_KEY = `${environment.apiKey}`;
   repoSearch : RepoSearch;
-  userInput : string;
 
   constructor(private http: HttpClient) {
-    this.repoSearch = new RepoSearch();
    }
 
-   dataRequest(){
-    interface ApiReponse{
-      data: any[];
-    }
+   getUser(search){
+    let promise = new Promise<RepoSearch>((resolve,reject)=>{
+      this.http.get<RepoSearch>(`${this.repoSearchUrl}${search}`).toPromise().then(
+        (success) => {
+          this.repoSearch = success;
+          console.log(success);
 
-   }
+            resolve();
+        },
+
+        (error) => {
+          console.log(error);
+          
+          reject();
+        }
+      )
+    })
+
+    return promise
+  };
 
 }

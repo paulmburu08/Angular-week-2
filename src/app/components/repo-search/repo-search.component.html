@@ -1,9 +1,9 @@
 <div class="container-fluid">
   <div>
-		<form #userForm="ngForm" (ngSubmit)="onSubmit()" >
+		<form #userForm="ngForm" (ngSubmit)="onSubmit(inputRepo)" >
 
 			<div class="form-group">
-				<input type="text" name="repo" id="repo" required #name='ngModel' [(ngModel)]="repoSearchInput" >
+				<input type="text" name="repo" id="repo" required #name='ngModel' [(ngModel)]="inputRepo" >
 			</div>
 
 			<div class="form-group">
@@ -13,7 +13,7 @@
 		</form>
 
 	</div>
-	<div>
-		{{repoSearchs | json}}
+	<div *ngFor="let user of users" >
+	{{users?.items[0].full_name}}
 	</div>
 </div>

@@ -1,5 +1,9 @@
 export class RepoSearch {
-    repoSearch: string[];
-    constructor(){}
+    total_count :  number;
+    items:[ {
+        name : any,
+        full_name : any,
+        private : any,
+    } ]
 }
 

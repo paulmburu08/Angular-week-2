@@ -14,7 +14,7 @@
 		<h4><i><b>Repositories found are:</b> {{users}}</i></h4>
 	</div>	
 	<div class="row">
-		<div *ngFor="let repo of repos" class="card col-md-3">
+		<div appBackgroundColor *ngFor="let repo of repos" class="card col-md-3">
 			<p><b>Repository name</b>: {{repo.name}}</p> <br>
 			<p><b>Owner name/Repo name</b>: {{repo.full_name}}</p> <br>
 			<p><b>Repo description</b>: {{repo.description}}</p> <br>

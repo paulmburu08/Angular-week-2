@@ -1,0 +1,9 @@
+.row{
+    margin-top: 50px;
+    padding: 50px;
+}
+
+.photo{
+    display: inline-block;
+    text-align: center;
+}

@@ -8,13 +8,17 @@ import { AppComponent } from './app.component';
 import { GithubSearchComponent } from './components/github-search/github-search.component';
 import { RepoSearchComponent } from './components/repo-search/repo-search.component';
 import { UserSearchComponent } from './components/user-search/user-search.component';
+import { NotFoundComponent } from './components/not-found/not-found.component';
+import { BackgroundColorDirective } from './directives/background-color.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
     GithubSearchComponent,
     RepoSearchComponent,
-    UserSearchComponent
+    UserSearchComponent,
+    NotFoundComponent,
+    BackgroundColorDirective
   ],
   imports: [
     BrowserModule,

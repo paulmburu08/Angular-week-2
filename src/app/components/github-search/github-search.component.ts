@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { UserSearchService } from 'src/app/services/user-search.service';
+import { UserSearch } from 'src/app/modules/user-search';
 
 @Component({
   selector: 'app-github-search',
@@ -7,9 +9,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GithubSearchComponent implements OnInit {
 
-  constructor() { }
+  constructor(private user_service : UserSearchService) { }
 
+  user : UserSearch
   ngOnInit(): void {
+    this.user_service.getUser("paulmburu08").then(
+      (success)=>{
+        this.user = this.user_service.userSearch
+      },
+      (error)=>{
+        console.log(error)
+      }
+      )
   }
 
 }

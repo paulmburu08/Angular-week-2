@@ -7,10 +7,14 @@
 }
 
 .row{
-    margin-top: 30px;
+    margin-top: 60px;
 }
  
 .photo{
     display: inline-block;
     text-align: center;
+}
+
+.container{
+    margin-top: 20px;
 }

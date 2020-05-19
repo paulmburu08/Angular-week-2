@@ -1,2 +1,13 @@
-<app-repo-search></app-repo-search>
-<app-user-search></app-user-search>
+<div class="row">
+	<div class="photo col-md-6">
+		<img src="{{user?.avatar_url}}" alt="photo" width="300px">
+	</div>
+	<div class="col-md-6">
+		<p><b>Username</b>: {{user?.login}}</p>
+		<p><b>Bio</b>: {{user?.bio}}</p>
+		<p><b>Repositories</b>: {{user?.public_repos}}</p>
+		<p><b>Followers</b>: {{user?.followers}}</p>
+		<p><b>Following</b>: {{user?.following}}</p>
+		<a href="{{user?.html_url}}">See User's Github page and public repositories</a>
+	</div>
+</div>

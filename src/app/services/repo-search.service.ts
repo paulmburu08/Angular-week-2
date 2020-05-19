@@ -55,11 +55,12 @@ export class RepoSearchService {
     let promise = new Promise<ApiResponse>((resolve,reject)=>{
       this.http.get<ApiResponse>(`${this.repoSearchUrl}${search}`).toPromise().then(response=>{
         for(let item of response.items){
-          this.repo = new RepoDescription("","","","");
+          this.repo = new RepoDescription("","","","","");
           this.repo.name = item.name;
           this.repo.full_name = item.full_name;
           this.repo.description = item.description;
           this.repo.forks = item.forks;
+          this.repo.html_url = item.html_url
 
           this.repos.push(this.repo)
         }  

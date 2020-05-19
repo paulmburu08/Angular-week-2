@@ -1,23 +1,25 @@
-<div class="container-fluid">
-  <div>
+<div class="container-fluid"><br>
 		<form #userForm="ngForm" (ngSubmit)="onSubmit(inputRepo)" >
 
-			<div class="form-group">
-				<input type="text" name="repo" id="repo" required #name='ngModel' [(ngModel)]="inputRepo" >
+			<div class="md-form active-cyan active-cyan-2 mb-3">
+				<input type="text" name="repo" id="repo" placeholder="Search repository"
+				required #name='ngModel' [(ngModel)]="inputRepo" class="form-control form-control-sm ml-3 w-50" aria-label="Search repository">
 			</div>
-
 			<div class="form-group">
-				<button type="submit">Submit</button>
+				<button type="submit" id="btn" class="btn btn-primary btn-sm">Submit</button>
 			</div>
 
 		</form>
-
-	</div>
-	<div>
-		{{users}}
-		<div *ngFor="let repo of repos" class="card">
-			{{repo.name}}
-			{{repo.full_name}}
-		</div>
+	<div class="userCount">
+		<h4><i><b>Repositories found are:</b> {{users}}</i></h4>
 	</div>	
+	<div class="row">
+		<div *ngFor="let repo of repos" class="card col-md-3">
+			<p><b>Repository name</b>: {{repo.name}}</p> <br>
+			<p><b>Owner name/Repo name</b>: {{repo.full_name}}</p> <br>
+			<p><b>Repo description</b>: {{repo.description}}</p> <br>
+			<p><b>Forks</b>: {{repo.forks}}</p> <br>
+			<a href="{{repo.html_url}}">Go to the repository</a>  
+		</div>
+	</div>
 </div>

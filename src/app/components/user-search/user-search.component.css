@@ -1,0 +1,16 @@
+#user{
+    border-color: dimgray;   
+}
+
+#btn{
+    margin-left:18px ;
+}
+
+.row{
+    margin-top: 30px;
+}
+ 
+.photo{
+    display: inline-block;
+    text-align: center;
+}

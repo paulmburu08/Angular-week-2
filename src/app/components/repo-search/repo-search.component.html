@@ -13,7 +13,11 @@
 		</form>
 
 	</div>
-	<div *ngFor="let user of users" >
-	{{users?.items[0].full_name}}
-	</div>
+	<div>
+		{{users}}
+		<div *ngFor="let repo of repos" class="card">
+			{{repo.name}}
+			{{repo.full_name}}
+		</div>
+	</div>	
 </div>

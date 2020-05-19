@@ -1,5 +1,13 @@
 .navigation{
-    margin-top: 10px;
-    display: flex;
-    justify-content: center;
+    display: inline-block;
+    text-align: center;
+}
+
+.jumbotron{
+    height: 20px;
+    background-color: lightgray;
+}
+
+.name{
+    color: black;
 }

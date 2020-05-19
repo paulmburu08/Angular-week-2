@@ -1,7 +1,7 @@
 @import "~bootstrap/dist/css/bootstrap.css";
 
 nav a.active{
-    color: lightblue;
+    color: red;
 }
 
 body{

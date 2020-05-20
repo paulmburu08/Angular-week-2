@@ -8,7 +8,7 @@ This is a website that allows you to search for github users by using their user
 {paulmburu08}https://github.com/paulmburu08
 
 # Description
-On the landing page we have a my Github information and the navigation bar. You can go to the User search page and search for the users by using their usernames where their information will be displayed. You can also go to the Repo search page where you can also search for repositories and their imformation will be displayed.
+On the landing page we have my Github information and the navigation bar. You can go to the User search page and search for the users by using their usernames where their information will be displayed. You can also go to the Repo search page where you can also search for repositories and their imformation will be displayed.
 
 # Project Set-up Instructions
 -Open github and clone the repository into your local computer.

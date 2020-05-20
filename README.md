@@ -1,3 +1,5 @@
+[![codebeat badge](https://codebeat.co/badges/bea24912-bb87-448e-83be-ff115f4c9b49)](https://codebeat.co/projects/github-com-paulmburu08-angular-week-2-master)
+
 # GITHUBSEARCH
 
 This is a website that allows you to search for github users by using their usernames and also search for repositories by their names.
